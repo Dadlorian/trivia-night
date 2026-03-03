@@ -1,0 +1,24 @@
+{
+  "total": 5,
+  "byCategory": {
+    "Science": 2,
+    "Arts & Music": 1,
+    "History": 2
+  },
+  "byDifficulty": {
+    "easy": 2,
+    "medium": 2,
+    "hard": 1
+  },
+  "byType": {
+    "multiple_choice": 2,
+    "true_false": 1,
+    "free_response": 2
+  },
+  "bySource": {
+    "NASA Solar System Exploration": 1,
+    "Encyclopedia Britannica": 2,
+    "NASA Education": 1,
+    "IUPAC": 1
+  }
+}

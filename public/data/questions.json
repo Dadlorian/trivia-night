@@ -1,0 +1,82 @@
+[
+  {
+    "id": "q001",
+    "question": "What is the largest planet in our solar system?",
+    "correct_answer": "Jupiter",
+    "incorrect_answers": ["Saturn", "Neptune", "Uranus"],
+    "type": "multiple_choice",
+    "category": "Science",
+    "difficulty": "easy",
+    "tags": ["astronomy", "planets", "solar system"],
+    "source": {
+      "name": "NASA Solar System Exploration",
+      "url": "https://solarsystem.nasa.gov",
+      "date_sourced": "2026-02-15",
+      "license": "Public Domain"
+    }
+  },
+  {
+    "id": "q002",
+    "question": "Which composer wrote the opera 'The Marriage of Figaro'?",
+    "correct_answer": "Wolfgang Amadeus Mozart",
+    "incorrect_answers": ["Ludwig van Beethoven", "Giuseppe Verdi", "Richard Wagner"],
+    "type": "multiple_choice",
+    "category": "Arts & Music",
+    "difficulty": "medium",
+    "tags": ["classical music", "opera", "composers"],
+    "source": {
+      "name": "Encyclopedia Britannica",
+      "url": "https://www.britannica.com",
+      "date_sourced": "2026-02-18",
+      "license": "Fair Use"
+    }
+  },
+  {
+    "id": "q003",
+    "question": "The Great Wall of China is visible from space with the naked eye.",
+    "correct_answer": "False",
+    "incorrect_answers": ["True"],
+    "type": "true_false",
+    "category": "History",
+    "difficulty": "medium",
+    "tags": ["China", "landmarks", "common myths"],
+    "source": {
+      "name": "NASA Education",
+      "url": "https://www.nasa.gov/education",
+      "date_sourced": "2026-02-20",
+      "license": "Public Domain"
+    }
+  },
+  {
+    "id": "q004",
+    "question": "What is the chemical symbol for the element with atomic number 79?",
+    "correct_answer": "Au",
+    "incorrect_answers": [],
+    "type": "free_response",
+    "category": "Science",
+    "difficulty": "hard",
+    "tags": ["chemistry", "elements", "periodic table"],
+    "source": {
+      "name": "IUPAC",
+      "url": "https://iupac.org/what-we-do/periodic-table-of-elements",
+      "date_sourced": "2026-02-22",
+      "license": "Public Domain"
+    }
+  },
+  {
+    "id": "q005",
+    "question": "In what year did the Berlin Wall fall?",
+    "correct_answer": "1989",
+    "incorrect_answers": [],
+    "type": "free_response",
+    "category": "History",
+    "difficulty": "easy",
+    "tags": ["Cold War", "Germany", "20th century"],
+    "source": {
+      "name": "Encyclopedia Britannica",
+      "url": "https://www.britannica.com",
+      "date_sourced": "2026-02-25",
+      "license": "Fair Use"
+    }
+  }
+]
