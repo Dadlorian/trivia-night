@@ -1,29 +1,34 @@
 import { Badge } from '@/components/ui/badge';
 
 const categoryColors: Record<string, string> = {
-  'General Knowledge': 'bg-blue-100 text-blue-800',
-  'Entertainment': 'bg-purple-100 text-purple-800',
-  'Music': 'bg-pink-100 text-pink-800',
-  'Science & Nature': 'bg-green-100 text-green-800',
-  'Science & Technology': 'bg-cyan-100 text-cyan-800',
-  'History': 'bg-amber-100 text-amber-800',
-  'Geography': 'bg-emerald-100 text-emerald-800',
-  'Sports': 'bg-orange-100 text-orange-800',
-  'Arts & Literature': 'bg-indigo-100 text-indigo-800',
-  'Scouting': 'bg-lime-100 text-lime-800',
-  'Celebrities': 'bg-rose-100 text-rose-800',
-  'Mythology': 'bg-violet-100 text-violet-800',
-  'Politics': 'bg-red-100 text-red-800',
-  'Video Games': 'bg-fuchsia-100 text-fuchsia-800',
-  'Food & Drink': 'bg-yellow-100 text-yellow-800',
-  'Society & Culture': 'bg-teal-100 text-teal-800',
+  'General Knowledge': 'bg-slate-100 text-slate-700 border-slate-200',
+  'Entertainment': 'bg-violet-50 text-violet-700 border-violet-200',
+  'Music': 'bg-rose-50 text-rose-700 border-rose-200',
+  'Science & Nature': 'bg-emerald-50 text-emerald-700 border-emerald-200',
+  'Science & Technology': 'bg-cyan-50 text-cyan-700 border-cyan-200',
+  'History': 'bg-amber-50 text-amber-700 border-amber-200',
+  'Geography': 'bg-teal-50 text-teal-700 border-teal-200',
+  'Sports': 'bg-orange-50 text-orange-700 border-orange-200',
+  'Arts & Literature': 'bg-indigo-50 text-indigo-700 border-indigo-200',
+  'Scouting': 'bg-lime-50 text-lime-700 border-lime-200',
+  'Celebrities': 'bg-pink-50 text-pink-700 border-pink-200',
+  'Mythology': 'bg-purple-50 text-purple-700 border-purple-200',
+  'Politics': 'bg-red-50 text-red-700 border-red-200',
+  'Video Games': 'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200',
+  'Food & Drink': 'bg-yellow-50 text-yellow-700 border-yellow-200',
+  'Society & Culture': 'bg-sky-50 text-sky-700 border-sky-200',
+  'Science': 'bg-emerald-50 text-emerald-700 border-emerald-200',
+  'Arts & Music': 'bg-indigo-50 text-indigo-700 border-indigo-200',
 };
 
 export function CategoryBadge({ category }: { category: string }) {
-  const colorClass = categoryColors[category] || 'bg-gray-100 text-gray-800';
+  const colorClass = categoryColors[category] || 'bg-gray-50 text-gray-700 border-gray-200';
 
   return (
-    <Badge variant="secondary" className={`${colorClass} font-medium text-xs`}>
+    <Badge
+      variant="outline"
+      className={`${colorClass} text-[11px] font-medium px-2 py-0.5 border`}
+    >
       {category}
     </Badge>
   );

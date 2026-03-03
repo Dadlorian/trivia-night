@@ -1,4 +1,4 @@
-import { Progress } from '@/components/ui/progress';
+import { motion } from 'motion/react';
 
 interface GameProgressProps {
   current: number;
@@ -7,19 +7,28 @@ interface GameProgressProps {
 }
 
 export function GameProgress({ current, total, score }: GameProgressProps) {
-  const progressPercent = total > 0 ? ((current + 1) / total) * 100 : 0;
+  const progressPercent = total > 0 ? ((current) / total) * 100 : 0;
 
   return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-muted-foreground">
-          Question <span className="font-semibold text-foreground">{current + 1}</span> of {total}
-        </span>
-        <span className="text-muted-foreground">
-          Score: <span className="font-semibold text-foreground">{score}</span>
-        </span>
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <div className="flex items-baseline gap-1.5">
+          <span className="text-2xl font-bold tracking-tight text-foreground">{current + 1}</span>
+          <span className="text-sm text-muted-foreground font-medium">/ {total}</span>
+        </div>
+        <div className="flex items-center gap-2 bg-secondary rounded-full px-3 py-1">
+          <div className="h-1.5 w-1.5 rounded-full bg-success" />
+          <span className="text-sm font-semibold text-secondary-foreground">{score} correct</span>
+        </div>
       </div>
-      <Progress value={progressPercent} className="h-2" />
+      <div className="h-1 bg-secondary rounded-full overflow-hidden">
+        <motion.div
+          className="h-full bg-primary rounded-full"
+          initial={{ width: 0 }}
+          animate={{ width: `${progressPercent}%` }}
+          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+        />
+      </div>
     </div>
   );
 }

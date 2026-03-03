@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AnimatePresence } from 'motion/react';
 import { useGameContext } from '@/context/GameContext';
 import { GameProgress } from '@/components/GameProgress';
 import { QuestionCard } from '@/components/QuestionCard';
@@ -27,31 +28,34 @@ export function PlayPage() {
     : null;
 
   return (
-    <div className="space-y-5 py-2">
+    <div className="space-y-6">
       <GameProgress
         current={gameState.currentIndex}
         total={gameState.questions.length}
         score={gameState.score}
       />
 
-      {gameState.phase === 'playing' && (
-        <QuestionCard
-          key={currentQuestion.id}
-          question={currentQuestion}
-          onSubmit={submitAnswer}
-          disabled={false}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {gameState.phase === 'playing' && (
+          <QuestionCard
+            key={currentQuestion.id}
+            question={currentQuestion}
+            onSubmit={submitAnswer}
+            disabled={false}
+          />
+        )}
 
-      {gameState.phase === 'answered' && currentAnswer && (
-        <AnswerReveal
-          question={currentQuestion}
-          userAnswer={currentAnswer}
-          onNext={nextQuestion}
-          onOverride={overrideCorrect}
-          isLast={gameState.currentIndex === gameState.questions.length - 1}
-        />
-      )}
+        {gameState.phase === 'answered' && currentAnswer && (
+          <AnswerReveal
+            key={`${currentQuestion.id}-answer`}
+            question={currentQuestion}
+            userAnswer={currentAnswer}
+            onNext={nextQuestion}
+            onOverride={overrideCorrect}
+            isLast={gameState.currentIndex === gameState.questions.length - 1}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
